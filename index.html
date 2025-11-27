@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação</title>
+    <meta name="description" content="Esse é o site de Recuperação do Cristian">
+    <meta name="author" content="Cristian Tinoco de Castro">
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <p id="mensagem"></p>
+    <p id="mensagem2"></p>
+    <p id="mensagem3"></p>
+    <p id="mensagem4"></p>
+    <p id="mensagem5"></p>
+
+    <script>
+        let numeros = [];
+        let soma
+        let media
+        let maior
+        let menor
+        for (let i = 0; i <= 4; i++){
+            numeros[i] = Number(prompt("Digite um número: "))
+            }
+            menor = numeros[0]
+            maior = numeros[0]
+        for (let i = 0; i <= 4; i++){
+            if (menor >= numeros[i]){
+            menor = numeros[i]
+        }
+    }
+        for (let i = 0; i <= 4; i++){
+            if (maior <= numeros[i]){
+            maior = numeros[i]
+        }
+    }
+
+        for (let i = 0; i <= 4; i++){
+             document.getElementById("mensagem").innerHTML += `Os números: ${numeros[i]} <br>`
+        }
+        soma = (numeros[0] + numeros[1] + numeros[2] + numeros[3] + numeros[4])
+            document.getElementById("mensagem2").innerHTML += `A soma deles é: ${soma} <br>`
+
+        media = soma/5
+            document.getElementById("mensagem3").innerHTML += `A média deles foi de: ${media} <br>`
+
+        
+    
+            document.getElementById("mensagem4").innerHTML += `O maior número deles foi: ${maior} <br>`
+
+
+            document.getElementById("mensagem5").innerHTML += `O menor número deles foi: ${menor} <br>`
+
+
+
+    </script>
+</body>
+</html>
